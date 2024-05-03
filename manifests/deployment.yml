@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: zaryabkhanazuredevops 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: zaryabkhanazuredevops
+  template:
+    metadata:
+      labels:
+        app: zaryabkhanazuredevops 
+    spec:
+      containers:
+        - name: zaryabkhanazuredevops 
+          image: zaryab.azurecr.io/zaryabkhanazuredevops
+          ports:
+          - containerPort: 80
